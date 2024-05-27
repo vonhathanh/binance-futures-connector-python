@@ -6,10 +6,10 @@ with open(
 ) as fh:
     requirements = fh.readlines()
 
-NAME = "binance-futures-connector"
+NAME = "bnb-futures-connector"
 DESCRIPTION = "This is a lightweight library that works as a connector to Binance Futures public API."
-AUTHOR = "Futures"
-URL = "https://github.com/binance/binance-futures-connector-python"
+AUTHOR = "hanhvn"
+URL = "https://github.com/vonhathanh/binance-futures-connector-python"
 VERSION = None
 
 about = {}
