@@ -62,6 +62,23 @@ class UMFuturesWebsocketClient(BinanceWebsocketClient):
 
         self.send_message_to_server(stream_name, action=action, id=id)
 
+    def agg_mark_price(self, speed: int = 0, id=None, action=None, **kwargs):
+        """Mark Price Streams
+
+        Mark price and funding rate for all symbols pushed every 3 seconds or every second.
+
+        Stream Name: !markPrice@arr or !markPrice@arr@1s
+
+        https://binance-docs.github.io/apidocs/futures/en/#mark-price-stream-for-all-market
+
+        Update Speed: 3000ms or 1000ms
+        """
+        stream_name = "!markPrice@arr"
+        if speed != 0:
+            stream_name += "@{}s".format(speed)
+
+        self.send_message_to_server(stream_name, action=action, id=id)
+
     def kline(self, symbol: str, interval: str, id=None, action=None, **kwargs):
         """Kline/Candlestick Streams
 
