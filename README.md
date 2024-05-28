@@ -18,7 +18,13 @@ This is a lightweight library that works as a connector to [Binance Futures publ
 ```bash
 pip install bnb-futures-connector
 ```
-
+## Build
+```bash
+python setup.py sdist
+```
+```bash
+twine upload dist/*
+```
 
 ## RESTful APIs
 
